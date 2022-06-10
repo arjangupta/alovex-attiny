@@ -7,11 +7,18 @@ void setup() {
 
 void loop() {
   uint8_t duty_cycle = INITIAL_DUTY_CYCLE; // initialize for count-down
-  for (uint8_t i = 0; i < INITIAL_DUTY_CYCLE; i++)
+  // Progressively decrease the duty cycle
+  for (uint8_t i = 0; i < INITIAL_DUTY_CYCLE; ++i)
   {
     analogWrite(PWM_PIN, --duty_cycle);
     delay(15);
   }
   // Wait for a small interval at the end
   delay(250);
+  // Progressively increase the duty cycle
+  for (uint8_t i = 0; i < INITIAL_DUTY_CYCLE; ++i)
+  {
+    analogWrite(PWM_PIN, ++duty_cycle);
+    delay(15);
+  }
 }
