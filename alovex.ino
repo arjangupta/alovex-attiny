@@ -1,4 +1,4 @@
-const int blink_pin = PIN0;
+const int blink_pin = PIN4;
 
 void setup() {                
   pinMode(blink_pin, OUTPUT);      // on-board LED
