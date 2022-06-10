@@ -1,5 +1,5 @@
 const uint8_t PWM_PIN = PIN4;
-const uint8_t INITIAL_DUTY_CYCLE = 230; // Approx. 90% duty cycle
+const uint8_t INITIAL_DUTY_CYCLE = 204; // 80% duty cycle
 
 void setup() {                
   pinMode(PWM_PIN, OUTPUT); // set the pin to output mode
