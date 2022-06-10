@@ -1,10 +1,12 @@
+const int blink_pin = PIN0;
+
 void setup() {                
-  pinMode(PIN1, OUTPUT);      // on-board LED
+  pinMode(blink_pin, OUTPUT);      // on-board LED
 }
 
 void loop() {
-  digitalWrite(PIN1, HIGH);
+  digitalWrite(blink_pin, HIGH);
   delay(1000); // wait 1 sec
-  digitalWrite(PIN1, LOW);
+  digitalWrite(blink_pin, LOW);
   delay(1000); // wait 1 sec
 }
