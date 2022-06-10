@@ -1,12 +1,14 @@
-const int blink_pin = PIN4;
+const int pwm_pin = PIN4;
 
 void setup() {                
-  pinMode(blink_pin, OUTPUT);      // on-board LED
+  pinMode(pwm_pin, OUTPUT); // set the pin to output mode
 }
 
 void loop() {
-  digitalWrite(blink_pin, HIGH);
-  delay(1000); // wait 1 sec
-  digitalWrite(blink_pin, LOW);
-  delay(1000); // wait 1 sec
+  analogWrite(pwm_pin, 255); // 100% duty cycle, or on
+  delay(1000);
+  analogWrite(pwm_pin, 128); // 50% duty cycle
+  delay(1000);
+  analogWrite(pwm_pin, 0);   // 0% duty cycle, or off
+  delay(1000);
 }
